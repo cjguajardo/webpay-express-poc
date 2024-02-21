@@ -16,11 +16,11 @@ app.set('views', path.join(__dirname, 'html'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 const port = 8080;
-const app_host = process.env.app_host || 'http://localhost'
+const app_host = process.env.app_host || `http://localhost:${port}`
 const { WebpayPlus } = transbank;
 
 const sessionId = 'S-123456';
-const returnUrl = `${app_host}:${port}/result`;
+const returnUrl = `${app_host}/result`;
 
 registerHelpers(hbs);
 

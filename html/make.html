@@ -1,19 +1,19 @@
-<main class="container p-8 max-w-4xl border">
+<section class="mx-auto mt-12 p-8 max-w-4xl border sm:text-2xl">
   <!-- a form with amount -->
   <div class="order-result" class="flex justify-center flex-col">
 
     <form hx-post="/order">
-      <div class="flex flex-col my-4">
+      <div class="flex flex-col my-4 gap-2">
         <label for="amount">Ingrese monto</label>
         <input class="border p-4 rounded" type="number" name="amount" />
       </div>
 
-      <div class="flex flex-col my-4">
+      <div class="flex flex-col my-4 gap-2">
         <label for="buyOrder">N. Orden</label>
         <input class="border p-4 rounded" type="text" name="buyOrder" />
       </div>
 
-      <button class="p-4 border rounded bg-indigo-600 text-white" 
+      <button class="p-4 border rounded bg-indigo-600 text-white sm:w-full" 
         hx-target="#order-result" hx-swap="outerHTML"
         type="submit">Generar Orden</button>
 
@@ -25,4 +25,4 @@
   <script>
   </script>
   {{/extend}}
-</main>
+</section>

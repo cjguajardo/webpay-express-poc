@@ -15,7 +15,7 @@ app.set('views', path.join(__dirname, 'html'));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-const port = 3000;
+const port = 8080;
 const { WebpayPlus } = transbank;
 
 const sessionId = 'S-123456';

@@ -7,6 +7,7 @@
   "scripts": {
     "start": "node index.js",
     "tw":"npx tailwindcss -i ./src/input.css -o ./public/output.css --watch",
+    "build": "npx tailwindcss -o ./public/output.css --minify",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Carlos Guajardo",

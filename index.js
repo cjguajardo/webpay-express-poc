@@ -60,6 +60,12 @@ app.get('/result',async (req, res)=>{
     res.locals = {...commitResponse};
 
     if(commitResponse.status==="AUTHORIZED"){
+      // format res.locals.amount to currency
+      commitResponse.amount = new Intl.NumberFormat('es-CL', { style: 'currency', currency: 'CLP' }).format(commitResponse.amount);
+      res.locals = {
+        ...commitResponse
+      };
+
       res.render('success');
     }
     else {

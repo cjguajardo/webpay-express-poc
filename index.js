@@ -41,7 +41,7 @@ app.post('/order', async(req,res)=>{
   res.render('payment');
 });
 
-app.get('/success',async (req, res)=>{
+app.get('/result',async (req, res)=>{
   const urlParams = new URLSearchParams(req.originalUrl.split('?')[1]||'');
   const token = urlParams.get('token_ws') || null;
   console.log({token})
